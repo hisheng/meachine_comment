@@ -11,7 +11,7 @@ namespace MeachineComment;
 class Comment
 {
     public $size;
-    public $comments;
+    public $comments; 
     
     public function __construct()
     {
