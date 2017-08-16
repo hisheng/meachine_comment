@@ -3,12 +3,11 @@
  * Created by PhpStorm.
  * User: hisheng
  * Date: 2017/8/16
- * Time: 10:03
+ * Time: 11:19
  */
-
 require_once __DIR__.'./../vendor/autoload.php';
 
-$user = new \MeachineComment\User();
-$user->index();
-var_dump($user->pop());
-var_dump($user->next());
+$c = new \MeachineComment\Comment();
+//$c->index();
+var_dump($c->pop());
+var_dump($c->next());

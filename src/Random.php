@@ -15,8 +15,16 @@ class Random
      * @return int
      * 给出 size 然后得到 余数
      */
+    public static $num;
     public static function get($size)
     {
-        return time() % $size ;
+        self::$num = time() % $size ;
+        return  self::$num;
+    }
+    
+    public static function next()
+    {
+        self::$num ++;
+        return self::$num;
     }
 }

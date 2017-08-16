@@ -8,6 +8,8 @@
  */
 namespace MeachineComment;
 
+use MeachineComment\Random;
+
 class User
 {
     public $size;
@@ -26,6 +28,13 @@ class User
     
     public function pop()
     {
+        $index = Random::get($this->size);
+        return $this->userids [$index];
+    }
     
+    public function next()
+    {
+        $index =  Random::next();
+        return isset($this->userids [$index]) ? $this->userids [$index] : $this->userids [0] ;
     }
 }
